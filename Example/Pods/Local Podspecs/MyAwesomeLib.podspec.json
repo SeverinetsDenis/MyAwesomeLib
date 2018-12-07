@@ -1,0 +1,22 @@
+{
+  "name": "MyAwesomeLib",
+  "version": "0.1.0",
+  "summary": "A short description of MyAwesomeLib.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/SeverinetsDenis/MyAwesomeLib",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "SeverinetsDenis": "severinetsdenis@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/SeverinetsDenis/MyAwesomeLib.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "MyAwesomeLib/Classes/**/*"
+}
