@@ -31,6 +31,13 @@ open class BaseTest: XCTestCase {
     }
     
     /**
+     Can be used for launching app without any arguments
+     */
+    open static func launchApp() {
+        Container.app.launch()
+    }
+    
+    /**
      Can be used when we need to relaunch app without resetting data
      */
     open static func launchAppWithoutReset() {

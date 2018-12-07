@@ -19,8 +19,8 @@ open class Constants {
     }
 }
 
-public struct Platform {
-    public static let isSimulator: Bool = {
+open class Platform {
+    open static let isSimulator: Bool = {
         var isSim = false
         #if arch(i386) || arch(x86_64)
         isSim = true
