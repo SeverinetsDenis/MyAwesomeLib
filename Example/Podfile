@@ -1,7 +1,7 @@
 use_frameworks!
 
 target 'MyAwesomeLib_Example' do
-  pod 'MyAwesomeLib', :path => '../'
+  pod 'MyAwesomeLib', :git => 'https://github.com/SeverinetsDenis/MyAwesomeLib', :branch => 'master'
 
   target 'MyAwesomeLib_Tests' do
     inherit! :search_paths

@@ -1,8 +1,8 @@
 {
   "name": "MyAwesomeLib",
   "version": "0.1.0",
-  "summary": "A short description of MyAwesomeLib.",
-  "description": "TODO: Add long description of the pod here.",
+  "summary": "Automation core tools for iOS and tvOS testing",
+  "description": "This automation tools allow to test an iOS and tvOS applications in the shortest way.",
   "homepage": "https://github.com/SeverinetsDenis/MyAwesomeLib",
   "license": {
     "type": "MIT",
@@ -18,5 +18,11 @@
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "MyAwesomeLib/Classes/**/*"
+  "source_files": "MyAwesomeLib/Classes/**/*",
+  "dependencies": {
+    "Alamofire": [
+      "~> 4.5.1"
+    ]
+  },
+  "weak_frameworks": "XCTest"
 }

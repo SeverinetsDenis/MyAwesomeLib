@@ -1,16 +1,29 @@
 PODS:
-  - MyAwesomeLib (0.1.0)
+  - Alamofire (4.5.1)
+  - MyAwesomeLib (0.1.0):
+    - Alamofire (~> 4.5.1)
 
 DEPENDENCIES:
-  - MyAwesomeLib (from `../`)
+  - MyAwesomeLib (from `https://github.com/SeverinetsDenis/MyAwesomeLib`, branch `master`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
 
 EXTERNAL SOURCES:
   MyAwesomeLib:
-    :path: "../"
+    :branch: master
+    :git: https://github.com/SeverinetsDenis/MyAwesomeLib
+
+CHECKOUT OPTIONS:
+  MyAwesomeLib:
+    :commit: 02ea4e70907c974e4801d4219a911927f96448da
+    :git: https://github.com/SeverinetsDenis/MyAwesomeLib
 
 SPEC CHECKSUMS:
-  MyAwesomeLib: 194e0d807ff2501dc3a13b45341689dc6fd1c392
+  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  MyAwesomeLib: 207cbac5fc2bc1dce400daefdc20a489f4ab6417
 
-PODFILE CHECKSUM: aebde0739487d3a3ff8814a7836afb7285754567
+PODFILE CHECKSUM: df0aa1c4c113ef1040d73c6f282e3bed6dc876f1
 
 COCOAPODS: 1.6.0.beta.1
