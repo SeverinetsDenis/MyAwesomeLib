@@ -6,7 +6,10 @@
 import XCTest
 
 class BaseTest: XCTestCase {
-        
+    
+    static let autotestsMode = "Autotests"
+    static let device = "iPhone"
+    
     override func setUp() {
         super.setUp()
         continueAfterFailure = true
@@ -16,7 +19,7 @@ class BaseTest: XCTestCase {
      Can be used for an iPad. Nothing will happen in an iPhone
      */
     static func rotateScreenRandomly() {
-        if (Constants.currentDevice == "iPhone"){
+        if (Constants.currentDevice == device){
             let orientations: Set<UIDeviceOrientation> = [.landscapeLeft, .landscapeRight, .portrait, .portraitUpsideDown]
             Container.device.orientation = orientations.randomObject()!
         }
@@ -28,7 +31,7 @@ class BaseTest: XCTestCase {
     static func launchAppWithArguments(_ args: [String]) {
         Container.app.launchArguments.removeAll()
         Container.app.launchArguments.append(contentsOf: args)
-        Container.app.launchArguments.append(LaunchArguments.autotestsMode)
+        Container.app.launchArguments.append(autotestsMode)
         Container.app.launch()
     }
     

@@ -27,15 +27,18 @@ Pod::Spec.new do |s|
   s.author           = { 'SeverinetsDenis' => 'severinetsdenis@gmail.com' }
   s.source           = { :git => 'https://github.com/SeverinetsDenis/MyAwesomeLib.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
   s.source_files = 'MyAwesomeLib/Classes/**/*'
   
   s.dependency 'Alamofire', '~> 4.5.1'
   s.weak_framework = "XCTest"
-#  s.pod_target_xcconfig = {
-#      'FRAMEWORK_SEARCH_PATHS' => '$(inherited) "$(PLATFORM_DIR)/Developer/Library/Frameworks"',
-#  }
+  s.pod_target_xcconfig = {
+      'ENABLE_BITCODE' => 'NO',
+      'OTHER_LDFLAGS' => '-weak-lswiftXCTest',
+      'OTHER_SWIFT_FLAGS' => '$(inherited) -suppress-warnings',
+      'FRAMEWORK_SEARCH_PATHS' => '$(inherited) "$(PLATFORM_DIR)/Developer/Library/Frameworks"',
+  }
 
   # s.resource_bundles = {
   #   'MyAwesomeLib' => ['MyAwesomeLib/Assets/*.png']

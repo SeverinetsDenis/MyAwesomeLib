@@ -16,7 +16,7 @@ extension XCUIElement {
      */
     @discardableResult
     public func clearAndTypeText(_ text: String) -> Void {
-        self.waitUntilEnabled(timeout: WaitFor.animation)
+        self.waitUntilEnabled(timeout: 5)
         self.click()
         let stringValue = self.value as? String ?? ""
         let deleteString = Array(stringValue).map { _ in XCUIKeyboardKey.delete.rawValue }.joined(separator: "")

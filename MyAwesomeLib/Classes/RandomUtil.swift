@@ -29,7 +29,7 @@ class RandomUtil {
      Random string with email format with given length before '@'
      */
     static func getEmail (length : Int) -> String {
-        return "\(OxaRandom.getString(length: length))@test.com"
+        return "\(RandomUtil.getString(length: length))@test.com"
     }
     
     /**
