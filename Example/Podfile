@@ -1,11 +1,11 @@
 use_frameworks!
+platform :ios, '9.0'
 
-target 'MyAwesomeLib_Example' do
-  pod 'MyAwesomeLib', :path => '../'
+target 'MyAwesomeLib_Example' do	
+end
 
-  target 'MyAwesomeLib_Tests' do
+target 'MyAwesomeLib_Tests' do
     inherit! :search_paths
-
+    pod 'MyAwesomeLib', :path => '../'
     
-  end
 end

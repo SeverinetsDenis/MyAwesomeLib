@@ -16,7 +16,7 @@
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "9.0"
   },
   "source_files": "MyAwesomeLib/Classes/**/*",
   "dependencies": {
@@ -24,5 +24,11 @@
       "~> 4.5.1"
     ]
   },
-  "weak_frameworks": "XCTest"
+  "weak_frameworks": "XCTest",
+  "pod_target_xcconfig": {
+    "ENABLE_BITCODE": "NO",
+    "OTHER_LDFLAGS": "-weak-lswiftXCTest",
+    "OTHER_SWIFT_FLAGS": "$(inherited) -suppress-warnings",
+    "FRAMEWORK_SEARCH_PATHS": "$(inherited) \"$(PLATFORM_DIR)/Developer/Library/Frameworks\""
+  }
 }

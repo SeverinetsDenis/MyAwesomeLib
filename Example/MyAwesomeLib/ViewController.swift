@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import MyAwesomeLib
 
 class ViewController: UIViewController {
 
