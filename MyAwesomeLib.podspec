@@ -18,8 +18,8 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
+    This automation tools allow to test an iOS and tvOS applications in the shortest way.
+  DESC
 
   s.homepage         = 'https://github.com/SeverinetsDenis/MyAwesomeLib'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
@@ -29,15 +29,14 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
 
-  #s.source_files = 'MyAwesomeLib/**/*'
-  s.source_files = '/**/*'
+  s.source_files = 'MyAwesomeLib/Classes/**/*'
   
   s.dependency 'Alamofire', '~> 4.5.1'
   s.weak_framework = "XCTest"
-  s.pod_target_xcconfig = {
-      'FRAMEWORK_SEARCH_PATHS' => '$(inherited) "$(PLATFORM_DIR)/Developer/Library/Frameworks"',
-  }
-  
+#  s.pod_target_xcconfig = {
+#      'FRAMEWORK_SEARCH_PATHS' => '$(inherited) "$(PLATFORM_DIR)/Developer/Library/Frameworks"',
+#  }
+
   # s.resource_bundles = {
   #   'MyAwesomeLib' => ['MyAwesomeLib/Assets/*.png']
   # }
