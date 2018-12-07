@@ -3,12 +3,12 @@ import Foundation
 import XCTest
 
 #if os(tvOS)
-public class TvFocusNavigator {    
+open class TvFocusNavigator {
     
     /*Need to override the matrix elements inside each tv page*/
     var elementsMatrix: [[XCUIElement]]
     
-    init(matrix: [[XCUIElement]]) {
+    public init(matrix: [[XCUIElement]]) {
         elementsMatrix = matrix
     }
         
@@ -65,7 +65,7 @@ public class TvFocusNavigator {
         return nil
     }
     
-    func setFocusToElement(_ element: XCUIElement) -> Void {
+    open func setFocusToElement(_ element: XCUIElement) -> Void {
         if (!self.checkMatrixOfElementsIsEmpty()) {
             XCTContext.runActivity(named: "Set focus on an element \(element.label)") {_ in
                 let destinatedElement = locationOfElement(element)
@@ -89,7 +89,7 @@ public class TvFocusNavigator {
         }
     }
     
-    func setFocusToElement(y: Int, x: Int) -> XCUIElement! {
+    open func setFocusToElement(y: Int, x: Int) -> XCUIElement! {
         if (!self.checkMatrixOfElementsIsEmpty()) {
             XCTContext.runActivity(named: "Set focus on an element (y, x) = (\(y + 1), \(x + 1))") {_ in
                 let destinatedElement = (y, x)
@@ -115,7 +115,7 @@ public class TvFocusNavigator {
         return nil
     }
     
-    func setFocusToRandomElement() -> XCUIElement {
+    open func setFocusToRandomElement() -> XCUIElement {
         let y = OxaRandom.getNumber(min: 1, max: self.elementsMatrix.count)
         let x = OxaRandom.getNumber(min: 1, max: self.elementsMatrix[0].count)
         return self.setFocusToElement(y: y - 1, x: x - 1)

@@ -2,12 +2,12 @@
 import XCTest
 
 /* Helper for iOS */
-public struct IOSUtil {
+open class IOSUtil {
     /**
      Scroll up by screen untill end of screen
      */
     @discardableResult
-    static func scrollUpUntilEndOfScreen(timeout: TimeInterval = 20) -> Bool {
+    open static func scrollUpUntilEndOfScreen(timeout: TimeInterval = 20) -> Bool {
         let start = Date()
         var previousImage = Data()
         var currentImage = Container.app.screenshot().pngRepresentation
@@ -27,7 +27,7 @@ public struct IOSUtil {
     /**
      Scroll up by screen in percentage
      */
-    static func scrollUpByScreen(percentageOfScreen : Int = 40) {
+    open static func scrollUpByScreen(percentageOfScreen : Int = 40) {
         let startPoint = Container.app.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: Double(percentageOfScreen / 100)))
         let finishPoint = Container.app.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0))
         startPoint.press(forDuration:0, thenDragTo: finishPoint)
@@ -36,14 +36,14 @@ public struct IOSUtil {
     /*
      Take a screenshot of an app's first window
      */
-    static func takeScreenshot() -> Data {
+    open static func takeScreenshot() -> Data {
         return Container.app.windows.firstMatch.screenshot().pngRepresentation
     }
     
     /*
      Bring app to background
      */
-    static func bringAppToBackground() {
+    open static func bringAppToBackground() {
         sleep(1)
         Container.device.press(.home)
     }
@@ -51,7 +51,7 @@ public struct IOSUtil {
     /*
      Bring app to foreground
      */
-    static func bringAppToForeground() {
+    open static func bringAppToForeground() {
         sleep(1)
         Container.app.activate()
     }

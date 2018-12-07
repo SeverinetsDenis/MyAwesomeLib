@@ -2,24 +2,24 @@
 import Foundation
 import XCTest
 
-public struct Container {
+open class Container {
     //To know the buldle ID of app use adb command in terminal like:
     //  ideviceinstaller --udid 6a179e90ede449e5f77837a2370faae5ff944f2a -l
     //static var app: XCUIApplication = XCUIApplication(bundleIdentifier: "com.oxagile.someplay")
-    static var app: XCUIApplication = XCUIApplication()
-    static var device: XCUIDevice = XCUIDevice.shared
+    open static var app: XCUIApplication = XCUIApplication()
+    open static var device: XCUIDevice = XCUIDevice.shared
     #if os(tvOS)
-        static let remote: XCUIRemote = XCUIRemote.shared()
+        open static let remote: XCUIRemote = XCUIRemote.shared()
     #endif
     
     /* Find element by part of label, identifier of placeHolder value */
-    static func find(_ type: XCUIElement.ElementType, _ partOfName: String) -> XCUIElement {
+    open static func find(_ type: XCUIElement.ElementType, _ partOfName: String) -> XCUIElement {
         let predicate = NSPredicate(format: "identifier CONTAINS[c] %@ OR label CONTAINS[c] %@ OR placeholderValue CONTAINS[c] %@", partOfName, partOfName, partOfName)
         return getElement(type, predicate)
     }
     
     /* Find all elements by element type */
-    static func findAll(_ type: XCUIElement.ElementType) -> XCUIElementQuery {
+    open static func findAll(_ type: XCUIElement.ElementType) -> XCUIElementQuery {
         return Container.app.descendants(matching: type)
     }
     

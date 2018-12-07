@@ -46,7 +46,7 @@ public extension XCUIElement {
      - Parameter timeout: time in seconds
      */
     @discardableResult
-    func waitUntilLabelIsChangedTo(expectedLabel: String, timeout: TimeInterval = 60) -> Bool {
+    public func waitUntilLabelIsChangedTo(expectedLabel: String, timeout: TimeInterval = 60) -> Bool {
         return waitByCondition(condition: {self.exists && self.label == expectedLabel}, timeout: timeout)
     }
     

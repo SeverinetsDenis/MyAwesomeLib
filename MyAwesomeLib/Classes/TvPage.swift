@@ -1,22 +1,21 @@
 import XCTest
 
 #if os(tvOS)
-public class TvPage {
+open class TvPage {
     
-    lazy var loader = Container.find(.image, "Loader")
-    var isPageLoaded = false
-    var elementMatrix: [[XCUIElement]] {
+    open var isPageLoaded = false
+    open var elementMatrix: [[XCUIElement]] {
         return [[]]
     }
-    lazy var focusNavigator: TvOSFocusNavigator {
+    open lazy var focusNavigator: TvOSFocusNavigator {
         return TvOSFocusNavigator(matrix: elementMatrix)
     }
     
-    required init() {
+    public required init() {
         isPageLoaded = waitForPageLoaded()
     }
     
-    func waitForPageLoaded() -> Bool {
+    open func waitForPageLoaded() -> Bool {
         return false
     }
     

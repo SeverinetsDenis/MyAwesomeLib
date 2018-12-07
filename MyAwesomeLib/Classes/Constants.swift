@@ -1,9 +1,9 @@
 import XCTest
 
-public class Constants {    
-    public static let CountryCode = (Locale.current as NSLocale).object(forKey: NSLocale.Key.countryCode) as? String ?? "US"
-    public static let LanguageCode = (Locale.current as NSLocale).object(forKey: NSLocale.Key.languageCode) as? String ?? "en"
-    static var currentDevice: String {
+open class Constants {
+    open static let CountryCode = (Locale.current as NSLocale).object(forKey: NSLocale.Key.countryCode) as? String ?? "US"
+    open static let LanguageCode = (Locale.current as NSLocale).object(forKey: NSLocale.Key.languageCode) as? String ?? "en"
+    open static var currentDevice: String {
         switch UIDevice.current.userInterfaceIdiom {
         case .phone:
             return "iPhone"
@@ -19,8 +19,8 @@ public class Constants {
     }
 }
 
-struct Platform {
-    static let isSimulator: Bool = {
+public struct Platform {
+    public static let isSimulator: Bool = {
         var isSim = false
         #if arch(i386) || arch(x86_64)
         isSim = true

@@ -1,12 +1,12 @@
 
 import Foundation
 
-public class RandomUtil {
+open class RandomUtil {
     
     /**
      Random string with given length
      */
-    static func getString (length : Int) -> String {
+    open static func getString (length : Int) -> String {
         
         let letters : NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
         
@@ -24,34 +24,34 @@ public class RandomUtil {
     /**
      Random string with email format with given length before '@'
      */
-    static func getEmail (length : Int) -> String {
+    open static func getEmail (length : Int) -> String {
         return "\(RandomUtil.getString(length: length))@test.com"
     }
     
     /**
      Random int number within range
      */
-    static func getNumber(min: Int, max: Int) -> Int {
+    open static func getNumber(min: Int, max: Int) -> Int {
         return min + Int(arc4random_uniform(UInt32(max - min + 1)))
     }
     
     /**
      Random double number within range
      */
-    static func getNumber(min: Double = 0, max: Double = 1) -> Double {
+    open static func getNumber(min: Double = 0, max: Double = 1) -> Double {
         return (Double(arc4random()) / Double(UInt32.max)) * (max - min) + min
     }
     
     /**
      Random true or false
      */
-    static func randomBool() -> Bool {
+    open static func randomBool() -> Bool {
         return arc4random_uniform(2) == 0
     }
     
 }
 
-extension Set {
+public extension Set {
     /**
      Random object of set
      */

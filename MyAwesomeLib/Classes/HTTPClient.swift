@@ -2,11 +2,11 @@
 import Alamofire
 import XCTest
 
-public class HTTPClient: XCTestCase {
+open class HTTPClient: XCTestCase {
     
     var requestExpectation: XCTestExpectation?
     
-    func execute<T: Decodable>(data: EndPoint,
+    open func execute<T: Decodable>(data: EndPoint,
                                         expect: String = "expectation",
                                         completion: @escaping (_ result: T, _ error: Error?) -> Void) {
    

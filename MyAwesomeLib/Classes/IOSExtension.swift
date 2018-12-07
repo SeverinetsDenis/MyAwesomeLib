@@ -29,7 +29,7 @@ public extension XCUIElement {
      Scroll untill the element is visible
      */
     @discardableResult
-    func scrollToElement(timeout: TimeInterval = 30) -> XCUIElement {
+    public func scrollToElement(timeout: TimeInterval = 30) -> XCUIElement {
         let start = Date()
         while !self.visible() {
             let startPoint = Container.app.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.2))
@@ -84,7 +84,7 @@ public extension XCUIElement {
     /**
      Checking whether a video inside element is running
      */
-    func isVideoRunningInside() -> Bool {
+    public func isVideoRunningInside() -> Bool {
         sleep(3)
         var result = false
         XCTContext.runActivity(named: "Checking video is running inside the element") { (activity) in
