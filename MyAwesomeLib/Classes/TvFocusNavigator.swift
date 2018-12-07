@@ -1,11 +1,9 @@
-//
-//  ElementNavigator.swift
-//
+
 import Foundation
 import XCTest
 
 #if os(tvOS)
-class TvFocusNavigator {    
+public class TvFocusNavigator {    
     
     /*Need to override the matrix elements inside each tv page*/
     var elementsMatrix: [[XCUIElement]]

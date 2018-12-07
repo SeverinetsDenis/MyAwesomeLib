@@ -1,16 +1,9 @@
-//
-//  TvOSUtil.swift
-//  SimpleProjectUITests
-//
-//  Created by Denis Severinets on 12/6/18.
-//  Copyright © 2018 Oxagile. All rights reserved.
-//
 
 import XCTest
 
 /* Helper for Apple TV */
 #if os(tvOS)
-struct TvRemoteUtil {
+public struct TvRemoteUtil {
     
     static private func doAction(remoteButton: XCUIRemoteButton, count: Int) -> Void {
         for _ in 1...count{

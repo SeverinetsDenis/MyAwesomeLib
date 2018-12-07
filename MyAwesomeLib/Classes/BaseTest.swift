@@ -1,11 +1,6 @@
-//
-//  BaseTest.swift
-//  Copyright © 2017 Oxagile. All rights reserved.
-//
-
 import XCTest
 
-class BaseTest: XCTestCase {
+public class BaseTest: XCTestCase {
     
     static let autotestsMode = "Autotests"
     static let device = "iPhone"

@@ -1,14 +1,7 @@
-//
-//  WaiterUtil.swift
-//  SimpleProjectUITests
-//
-//  Created by Denis Severinets on 12/7/18.
-//  Copyright © 2018 Oxagile. All rights reserved.
-//
 
 import XCTest
 
-extension XCUIElement {
+public extension XCUIElement {
     
     private func waitByCondition (condition: () -> Bool, timeout: TimeInterval) -> Bool {
         let start = Date()

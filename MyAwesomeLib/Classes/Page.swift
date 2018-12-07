@@ -1,15 +1,8 @@
-//
-//  Page.swift
-//  Copyright © 2017 Oxagile. All rights reserved.
-//
 
 import Foundation
 import XCTest
 
-/**
- Example Class for common Page
- */
-class Page {
+public class Page {
     
     var isPageLoaded = false
     

@@ -1,11 +1,8 @@
-//
-//  Copyright © 2018 Oxagile. All rights reserved.
-//
 
 import Foundation
 import XCTest
 
-struct Container {
+public struct Container {
     //To know the buldle ID of app use adb command in terminal like:
     //  ideviceinstaller --udid 6a179e90ede449e5f77837a2370faae5ff944f2a -l
     //static var app: XCUIApplication = XCUIApplication(bundleIdentifier: "com.oxagile.someplay")

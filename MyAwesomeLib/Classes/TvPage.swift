@@ -1,7 +1,7 @@
 import XCTest
 
 #if os(tvOS)
-class TvPage {
+public class TvPage {
     
     lazy var loader = Container.find(.image, "Loader")
     var isPageLoaded = false

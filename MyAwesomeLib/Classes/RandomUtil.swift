@@ -1,11 +1,7 @@
-//
-//  OxaRandom.swift
-//  Copyright © 2017 Oxagile. All rights reserved.
-//
 
 import Foundation
 
-class RandomUtil {
+public class RandomUtil {
     
     /**
      Random string with given length

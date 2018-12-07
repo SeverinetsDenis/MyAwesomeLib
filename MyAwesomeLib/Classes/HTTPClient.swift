@@ -1,6 +1,3 @@
-//
-//  HTTPCodable.swift
-//
 
 import Alamofire
 import XCTest

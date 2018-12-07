@@ -1,15 +1,8 @@
-//
-//  IOSUtil.swift
-//  SimpleProjectUITests
-//
-//  Created by Denis Severinets on 12/6/18.
-//  Copyright © 2018 Oxagile. All rights reserved.
-//
 
 import XCTest
 
 /* Helper for iOS */
-struct IOSUtil {
+public struct IOSUtil {
     /**
      Scroll up by screen untill end of screen
      */

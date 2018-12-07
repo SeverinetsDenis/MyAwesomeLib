@@ -1,10 +1,6 @@
-//
-//  Copyright © 2018 Oxagile. All rights reserved.
-//
-
 import XCTest
 
-class Constants {    
+public class Constants {    
     public static let CountryCode = (Locale.current as NSLocale).object(forKey: NSLocale.Key.countryCode) as? String ?? "US"
     public static let LanguageCode = (Locale.current as NSLocale).object(forKey: NSLocale.Key.languageCode) as? String ?? "en"
     static var currentDevice: String {

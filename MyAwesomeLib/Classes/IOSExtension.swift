@@ -8,7 +8,7 @@
 
 import XCTest
 
-extension XCUIElement {
+public extension XCUIElement {
     
     /**
      Removes any current text in the field before typing in the new value
