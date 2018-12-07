@@ -5,7 +5,7 @@ public class BaseTest: XCTestCase {
     static let autotestsMode = "Autotests"
     static let device = "iPhone"
     
-    override func setUp() {
+    override public func setUp() {
         super.setUp()
         continueAfterFailure = true
     }
@@ -41,7 +41,7 @@ public class BaseTest: XCTestCase {
     /**
      It's need to remove all arguments at the and of test class
      */
-    override class func tearDown() {
+    override public class func tearDown() {
         Container.app.launchArguments.removeAll()
     }
 }
