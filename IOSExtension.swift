@@ -1,11 +1,3 @@
-//
-//  IosExtensions.swift
-//  SimpleProjectUITests
-//
-//  Created by Denis Severinets on 12/6/18.
-//  Copyright © 2018 Oxagile. All rights reserved.
-//
-
 import XCTest
 
 extension XCUIElement {
